@@ -1,5 +1,5 @@
 
-Activity:
+# Activity:
 
 # In the below exercises, write code that achieves
 # the desired result. To check your work, run this
@@ -7,24 +7,32 @@ Activity:
 # `ruby hashes_1.rb`
 
 foods = {"apples": 23, "grapes": 507, "eggs": 48}
-p zoo
+
 
 # Write code that prints all of the 'keys' of the foods variable 
 # you created above:
-# YOUR CODE HERE
+
+foods.each do |food, quantity|
+  puts food
+end
+
 
 # Write code that prints all of the 'values' of the foods variable 
 # you created above:
-# YOUR CODE HERE
+foods.each do |food, quantity|
+  puts quantity
+end
 
 # Write code that prints the value of the second food of the foods variable 
 # you created above:
-# YOUR CODE HERE
+
+puts foods[:"grapes"]
 
 # Write code that adds a food to the foods hash. 
 # Then, print the updated hash:
 # YOUR CODE HERE
-
+foods["bananas"] = "bunch"
+puts foods
 
 #-------------------
 # Part 2: Email
@@ -39,14 +47,27 @@ p zoo
 
 # Write code that prints your email hash to the terminal.
 
+email = {
+  sender: "me@home.net",
+  sender_name: "Andrew",
+  recipient: "you@school.edu",
+  recipient_name: "Sarah",
+  time: "11:11AM",
+  subject: "how's class?"
+}
 
 # Write code that prints all of the 'keys' of the email hash 
 # you created above:
-# YOUR CODE HERE
+
+email.each do |key, value|
+  puts key
+end
 
 # Write code that prints all of the 'values' of the email hash 
 # you created above:
-# YOUR CODE HERE
+email.each do |key, value|
+  puts value
+end
 
 
 #-------------------
@@ -97,3 +118,32 @@ p posts[0]
 # YOU DO: Create an array of at least 3 EMAIL Hashes, using the same 
 # key-value pairs you used in your email Hash above.
 # Then, print the email Array to the Terminal.
+
+email_array = [
+  {
+    sender: "me@home.net",
+    sender_name: "Andrew",
+    recipient: "you@school.edu",
+    recipient_name: "Sarah",
+    time: "11:11AM",
+    subject: "how's class?"
+  },
+  {
+    sender: "you@school.edu",
+    sender_name: "Sarah",
+    recipient: "me@home.net",
+    recipient_name: "Andrew",
+    time: "12:12PM",
+    subject: "so loooong"
+  },
+  {
+    sender: "me@home.net",
+    sender_name: "Andrew",
+    recipient: "you@school.edu",
+    recipient_name: "Sarah",
+    time: "1:11PM",
+    subject: "sorry boo"
+  }
+]
+
+puts email_array
